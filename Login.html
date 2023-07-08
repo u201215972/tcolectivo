@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -20,23 +22,25 @@
             <h1>Taxi Colectivo SAC</h1>
             <hr>
             <form action="" class="form">
-                
+
                 <label for="Usuario" class="label">Usuario</label>
-                <input type="Usuario" id="Usuario" placeholder="Ingrese Usuario" class="input input-Usuario">
+                <input type="Usuario" id="Usuario" placeholder="Ingrese Usuario" class="input input-Usuario" />
 
                 <label for="Contraseña" class="label">Contraseña</label>
-                <input type="Contraseña" id="Contraseña" placeholder="Ingrese Contraseña" class="input input-Contraseña">
+                <input type="Contraseña" id="Contraseña" placeholder="Ingrese Contraseña"
+                    class="input input-Contraseña" />
 
-                <input type="submit" value="Acceder" class="primary-btn btn-login">
-
-                <a href="#">Olvido su Contraseña</a>
 
             </form>
+            <button onclick="location.href='/rutas_mapa.html'" class="secondary-btn signup-btn"> Acceder </button>
 
-            <button class="secondary-btn signup-btn">Regístrate</button>
-            
+            <a href="">Olvido su Contraseña</a>
+
+            <button class="secondary-btn signup-btn" onclick="location.href='/registro.html'">Regístrate</button>
+
         </div>
     </section>
-    
+
 </body>
+
 </html>
