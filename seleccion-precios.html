@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Taxi Colectivo - Seleccionar Tarifa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    nav {
+      background-color: #2EA6DE;
+    }
+    nav .logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    nav .logo img {
+          height: 70px;
+          width: auto;
+          border-radius: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="logo">
+            <img src="Img/taxi.jpg" alt="logo">
+            <a class="navbar-brand" href="#">Taxi Colectivo</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reservas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido de la página -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="text-center mb-4">Seleccionar Tarifa</h1>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Información del Viaje</h5>
+            <p class="card-text">Av. La marina - Faucet</p>
+            <form>
+              <div class="form-group">
+                <label for="tarifa">Selecciona una Tarifa:</label>
+                <select class="form-control" id="tarifa">
+                  <option>Tarifa 1: S/ 9.00 (15:00 horas)</option>
+                  <option>Tarifa 2: S/ 10.00 (16:00 horas)</option>
+                  <option>Tarifa 3: S/ 12.00 (18:00 horas)</option>
+                  <option>Tarifa 4: S/ 14.00 (20:00 horas)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
