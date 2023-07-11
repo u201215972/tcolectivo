@@ -35,11 +35,11 @@ margin-right: 10px;
 
 
 nav{
-    background-color: white;
+    background-color: greenyellow;
     position: fixed;
-    width: 100%;
+    width: 10%;
 }
-nav .logo{
+/* nav .logo{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -49,7 +49,7 @@ nav .logo{
 nav .logo img{
     height: 45px;
     width: auto;
-}
+} */
 .login{
     width: 100%;
     height: 100vh;
@@ -154,6 +154,14 @@ line-height: 300%;
 
 }
 
+.texto2 {
+    background-color: gainsboro;
+    color: black;
+    padding: 5px;
+    text-align: center;
+
+}
+
 @media(max-width: 640px){
     nav .logo{
         display: none;
@@ -176,9 +184,13 @@ line-height: 300%;
 
 .cabecera {
     background-color:#2EA6DE;
- color: withe;
+ color: #dea02e;
  padding: 15px;
+ width: auto;
  text-align: center;
+ /* float: left; */
+
+
 }
 
 .cuerpo {
@@ -255,8 +267,30 @@ background-color: aqua;
 }
 
 
+ /* Container para googlemaps */
+ .contenedor3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  
+  .texto3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .mapa3 {
+    width: 100%;
+    height: 20px; /* Ajusta la altura del mapa según tus necesidades */
+  }
+
+
+
+
 @media screen and (max-width:400px){
-    .menu, .principal, .derecha,  .map-responsive, .h1, .d-flex flex-column mb-3, .cabecera, .form-control {
+    .menu, .principal, .derecha,  .map-responsive, .h1, .d-flex flex-column mb-3, .cabecera, .form-control .foto-estrellas, .contenedor3 {
     width: 100%;
 
 }
@@ -282,7 +316,7 @@ display: inline-block;
 @media(min-width: 400px){
 .miboton-1{
     padding: 15px 105px;
-    /* background-color: aqua; */
+    background-color: aqua; 
     border: 1px;
 }
 
@@ -295,13 +329,185 @@ display: inline-block;
 }
 
 .logo {
-    width: 31px;
-    height: 31px;
+    width: 20px;
+    height: 20px;
     vertical-align: text-bottom;  
+    /* float: left;
+    margin-right: 10px; */
+
+
 }
 
-.iconocasa1 {
-    width: 10%;
-    height: 10%;
+
+
+.imagen-izquierda {
+    float: left;
+    margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+    background-color: #00FFFF;
+  }
+
+
+  /* Contender de botones */
+  .contenedor-pie {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
   
-}
+  .contenedor-botones {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .boton-redondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .boton-redondo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .boton-redondo {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .boton-redondo img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  
+
+/* Agregar foto de conductor en circulo */
+.contenedor-pantalla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+  }
+  
+  .contenedor-circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .contenedor-circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .contenedor-circulo p {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Foto de estrellas */
+  .contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    max-width: 70%;
+    height: 70px; /* Altura deseada */
+    height: 10vh;
+  }
+  
+  .contenedor-imagen img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+    
+  @media (max-width: 768px) {
+    .contenedor-imagen {
+      height: 0px; /* Altura deseada para pantallas más pequeñas */
+    }
+  }
+/* Contenedor de botones aceptar y cencelar */
+.contenedor-botones {
+    text-align: center;
+  }
+  
+  .boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .boton.aceptar {
+    background-color: green;
+    color: white;
+  }
+  
+  .boton.cancelar {
+    background-color: red;
+    color: white;
+  }
+  
+  .boton:hover {
+    opacity: 0.8;
+  }
+  
+  /* Foto aceptacion taxi */
+  .contenedor-pantalla1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
+  
+  .contenedor-foto1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+  }
+  
+  .contenedor-foto1 img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .texto {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+ /* Colocar dos fotos en pantalla patida en dos  */
+ .contenedor-fila {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .foto {
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .foto img {
+    width: 35px; /* Ajusta el ancho de las imágenes según tus necesidades */
+    height: 35px; /* Ajusta la altura de las imágenes según tus necesidades */
+    object-fit: cover;
+  }
+  
+  .foto p {
+    margin-top: 0px;
+  }
