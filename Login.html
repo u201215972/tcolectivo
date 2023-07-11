@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+    .captcha {
+      display: inline-block;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    </style>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcSPRUnAAAAAMJ_w7DPtPJy1yG4QoUxlkqyO_7w"></script>
     <link rel="stylesheet" href="css/login.css">
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+          generarCaptcha();
+        });
+    
+        function generarCaptcha() {
+          var num1 = Math.floor(Math.random() * 10);
+          var num2 = Math.floor(Math.random() * 10);
+          var suma = num1 + num2;
+    
+          var captchaLabel = document.getElementById("captcha-label");
+          captchaLabel.textContent = "Eres humano? Por favor, resuelve la siguiente suma: " + num1 + " + " + num2 + " = ";
+    
+          var captchaInput = document.getElementById("captcha-input");
+          captchaInput.value = "";
+          captchaInput.setAttribute("data-suma", suma);
+        }
+      </script>
 </head>
-
 <body>
     <nav>
         <div class="logo">
@@ -22,23 +46,24 @@
             <h1>Taxi Colectivo SAC</h1>
             <hr>
             <form action="" class="form">
-
                 <label for="Usuario" class="label">Usuario</label>
-                <input type="Usuario" id="Usuario" placeholder="Ingrese Usuario" class="input input-Usuario" />
-
+                <input type="Usuario" id="Usuario" placeholder="Ingrese Usuario" class="input input-Usuario">
                 <label for="Contraseña" class="label">Contraseña</label>
-                <input type="Contraseña" id="Contraseña" placeholder="Ingrese Contraseña"
-                    class="input input-Contraseña" />
+                <input type="Contraseña" id="Contraseña" placeholder="Ingrese Contraseña" class="input input-Contraseña">
+                <div class="captcha">
+                    <label id="captcha-label" for="captcha">Eres humano? Por favor, resuelve la siguiente suma:</label>
+                    <input type="text" id="captcha-input" name="captcha" required style="width: 35%; float: right;"> 
+                  </div>
+                  <!-- Otros campos del formulario -->
+                 <!-- <input type="submit" value="Enviar"> -->
+                <!-- <img src="Img/google-recaptcha.gif" alt=""> -->
+                <input type="submit" value="Acceder" class="primary-btn btn-login">
+                <a href="#">Olvido su Contraseña</a>
             </form>
-            <button onclick="location.href='/rutas_mapa.html'" class="secondary-btn signup-btn"> Acceder </button>
 
-            <a href="">Olvido su Contraseña</a>
-
-            <button class="secondary-btn signup-btn" onclick="location.href='/registro.html'">Regístrate</button>
-
+            <button class="secondary-btn signup-btn">Regístrate</button>
+            
         </div>
     </section>
-
 </body>
-
 </html>
