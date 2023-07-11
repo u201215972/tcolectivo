@@ -1,98 +1,144 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <style>
-        .taxi:hover {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Seleccion de Taxis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    nav {
+      background-color: #2EA6DE;
+    }
+    nav .logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    nav .logo img {
+          height: 70px;
+          width: auto;
+          border-radius: 40px;
+    }
+    .taxi:hover {
             cursor: pointer;
             background-color: rgb(239, 230, 230);
-        }
-    </style>
-
-    <title>Seleccion-taxis-</title>
+    }
+    .btn-primary {
+    background-color: rgb(0, 170, 255);
+    width: 150px;
+    height: 50px;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 bg-info">
-                <h1 class="text-center">Taxi Colectivo SAC</h1>
-            </div>
-            <div class="col-12 p-0 m-b-10" style="margin-bottom: 20px;">
-                <div class="google maps">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d124858.49850878498!2d-77.037568!3d-12.055347200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1688864826903!5m2!1ses-419!2spe"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
-                    </div>
-                    <div class="col-8" style="padding-top: 10px;">
-                        <p class="m-0">Taxi Colectivo Pet&nbsp;&nbsp;&nbsp;S/ 5.00</p>
-                        <p>Pasa en 5 min</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
-                    </div>
-                    <div class="col-8" style="padding-top: 10px;">
-                        <p class="m-0">Taxi Colectivo Confort&nbsp;&nbsp;&nbsp;S/ 6.00</p>
-                        <p>Pasa en 10 min</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
-                    </div>
-                    <div class="col-8" style="padding-top: 10px;">
-                        <p class="m-0">Colectivo Plus&nbsp;&nbsp;&nbsp;S/ 3.00</p>
-                        <p>Pasa en 15 min</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
-                    </div>
-                    <div class="col-8" style="padding-top: 10px;">
-                        <p class="m-0">Taxi Colectivo Confort&nbsp;&nbsp;&nbsp;S/ 7.00</p>
-                        <p>Pasa en 20 min</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 text-center" style="padding-top: 15px;">
-                <button type="button" class="btn btn-primary btn-block">&nbsp;Pedir ahora&nbsp;</button>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="logo">
+            <img src="Img/taxi.jpg" alt="logo">
+            <a class="navbar-brand" href="#">Taxi Colectivo</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reservas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Contenido de la página -->
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0 m-b-10" style="margin-bottom: 20px;">
+            <div class="google maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d124858.49850878498!2d-77.037568!3d-12.055347200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1688864826903!5m2!1ses-419!2spe"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+        <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
+                </div>
+                <div class="col-8" style="padding-top: 10px;">
+                    <p class="m-0">Taxi Colectivo Pet&nbsp;&nbsp;&nbsp;S/ 5.00</p>
+                    <p>Pasa en 5 min</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
+                </div>
+                <div class="col-8" style="padding-top: 10px;">
+                    <p class="m-0">Taxi Colectivo Confort&nbsp;&nbsp;&nbsp;S/ 6.00</p>
+                    <p>Pasa en 10 min</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
+                </div>
+                <div class="col-8" style="padding-top: 10px;">
+                    <p class="m-0">Colectivo Plus&nbsp;&nbsp;&nbsp;S/ 3.00</p>
+                    <p>Pasa en 15 min</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 taxi">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/img3_1.jpg" width="100" height="80" alt="Taxi2" class="image2">
+                </div>
+                <div class="col-8" style="padding-top: 10px;">
+                    <p class="m-0">Taxi Colectivo Confort&nbsp;&nbsp;&nbsp;S/ 7.00</p>
+                    <p>Pasa en 20 min</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center" style="padding-top: 15px;">
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary btn-block">&nbsp;Pedir ahora&nbsp;</button>
+            <br>
+        </div>
     </div>
-    </div>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+</div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>
 
