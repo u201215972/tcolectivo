@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indique su origen y desino</title>
+    <title>Indique su origen y destino</title>
     <link rel="stylesheet" href="./css/loginjy.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 </head>
@@ -35,8 +35,9 @@
         <p>
 
 
-        <div class="d-flex flex-column mb-3">
+        <!-- <div class="d-flex flex-column mb-3">
             <div class="p-2">
+
                 <h1 class="h1">  <img class="logo" src="./img/ubicacion.png"> ¿Donde estás?
                 </h1>
             </div>
@@ -46,8 +47,67 @@
                 <h1 class="h1"> <img class="logo" src="./img/ubicacion.png"> ¿A dónde vas? </h1>
             </div>
             <hr width=375>
+        </div> -->
 
-        </div>
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            .form-row {
+              display: flex;
+              margin-bottom: 10px;
+            }
+        
+            .form-row label {
+              width: 100px;
+            }
+        
+            .form-row .input-wrapper {
+              flex: 1;
+            }
+        
+            .form-row .input-wrapper input {
+              width: 100%;
+            }
+          </style>
+        </head>
+        <body>
+          <form>
+            <div class="form-row">
+              <div class="input-wrapper">
+                <label for="name">.</label>
+                <input type="text" id="name">
+              </div>
+              <div class="p-2">
+
+                <h1 class="h1">  <img class="logo" src="./img/ubicacion.png"> ¿Donde estás?
+                </h1>
+            </div>
+            
+
+            </div>
+            <div class="form-row">
+              <div class="input-wrapper">
+                <label for="phone">.</label>
+                <input type="text" id="phone">
+              </div>
+              <div class="p-2">
+
+                <h1 class="h1">  <img class="logo" src="./img/ubicacion.png"> ¿A donde vas?
+                </h1>
+            </div>
+
+            </div>
+            
+<br>
+          </form>
+        </body>
+        </html>
+        
+
+
+        </form>
+
 
         <div class="map-responsive">
 
@@ -57,6 +117,17 @@
 
 
         </div>
+<br>
+<br>
+
+        <div class="contenedor-botones">   
+                      
+          <a href="https://u201215972.github.io/tcolectivo/aceptacion_taxi1.html"> <button class="boton aceptar">Buscar</button> </a>
+  
+           <!-- <a href="https://u201215972.github.io/tcolectivo/rutas_mapa.html"> <button class="boton cancelar">Cancelar</button> </a> -->
+         
+           
+          </div>
 
         </p>
 
@@ -69,8 +140,11 @@
 
     <div class="pie">
 
-         <div class="contenedor-pie">
+        <div class="contenedor-pie">
             <div class="contenedor-botones">
+              <button class="boton-redondo">
+                <img src="./img/persona1.png" alt="Imagen 2">
+              </button>
               <button class="boton-redondo">
                 <img src="./img/reloj1.png" alt="Imagen 1">
               </button>
