@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
     <style>
     .captcha {
       display: inline-block;
       font-size: 18px;
       margin-bottom: 10px;
     }
+    label#captcha-label {
+        width: 65%;
+    }
     </style>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcSPRUnAAAAAMJ_w7DPtPJy1yG4QoUxlkqyO_7w"></script>
-    <link rel="stylesheet" href="css/login.css">
+    
+    
     <script>
         window.addEventListener("DOMContentLoaded", function() {
           generarCaptcha();
@@ -33,37 +38,42 @@
       </script>
 </head>
 <body>
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="logo">
-            <img src="./img/taxi.jpg" alt="logo">
-            <h1>Taxi Colectivo SAC</h1>
+                <img src="Img/taxi.jpg" alt="logo">
+                <a class="navbar-brand" href="index.html">Taxi Colectivo</a>
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
     <section class="login">
         <div class="form-container">
             <img class="logo" src="./img/taxi.jpg" alt="logo">
             <hr>
             <h1>Taxi Colectivo SAC</h1>
-            <hr>
-            <form action="" class="form">
-                <label for="Usuario" class="label">Usuario</label>
-                <input type="Usuario" id="Usuario" placeholder="Ingrese Usuario" class="input input-Usuario">
-                <label for="Contraseña" class="label">Contraseña</label>
-                <input type="Contraseña" id="Contraseña" placeholder="Ingrese Contraseña" class="input input-Contraseña">
-                <div class="captcha">
-                    <label id="captcha-label" for="captcha">Eres humano? Por favor, resuelve la siguiente suma:</label>
-                    <input type="text" id="captcha-input" name="captcha" required style="width: 35%; float: right;"> 
-                  </div>
-                  <!-- Otros campos del formulario -->
-                 <!-- <input type="submit" value="Enviar"> -->
-                <!-- <img src="Img/google-recaptcha.gif" alt=""> -->
-                <input type="submit" value="Acceder" class="primary-btn btn-login">
-                <a href="#">Olvido su Contraseña</a>
-            </form>
-
-            <button class="secondary-btn signup-btn">Regístrate</button>
             
+            <form action="reserva-viaje-peru.html" class="form">
+                <div class="form-group">
+                    <label for="Usuario" class="label">Usuario</label>
+                    <input type="Usuario" id="Usuario" placeholder="Ingrese Usuario" class="input input-Usuario">
+                    <label for="Contraseña" class="label">Contraseña</label>
+                    <input type="Contraseña" id="Contraseña" placeholder="Ingrese Contraseña" class="input input-Contraseña">
+                    <div class="captcha">
+                        <input type="text" id="captcha-input" name="captcha" required style="width: 28%; float: right;"> 
+                        <label id="captcha-label" for="captcha">Eres humano? Por favor, resuelve la siguiente suma:</label>
+                        
+                      </div>
+                      <!-- Otros campos del formulario -->
+                     <!-- <input type="submit" value="Enviar"> -->
+                    <!-- <img src="Img/google-recaptcha.gif" alt=""> -->
+                    <input type="submit" value="Acceder" class="primary-btn btn-login">
+                </div>
+            </form>
+            <div class="forgot"><a href="Registro.html">Regístrate</a></div>
+            <div class="forgot"><a href="recuperar-contrasena.html">Olvidé mi contraseña</a></div>
         </div>
+        
     </section>
 </body>
 </html>

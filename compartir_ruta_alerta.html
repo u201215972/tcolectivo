@@ -3,85 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Compartir ruta alerta</title>
     <link rel="stylesheet" href="./css/loginjy.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script>
+        function alertar() {
+          alert("se ha avisado a sus contactos de confianza, mantenga la calma y de ser necesario contacte a los numeros de emergencia: 105 policia, 116 central de bomberos, 119 ambulancias SAMU ");
+        }
+    </script>
 </head>
 
 
 <body>
     
     
-    <div class="cuerpo">
-
-        <div class="cabecera">
-            
-            <!-- <h1>Cabecera</h1> -->
-            <img src="./img/taxi2.jpg"
-                style="height: 80px;" class="remove-bg" >
-
-        </div>
-
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="logo">
+            <img src="Img/taxi.jpg" alt="logo">
+            <a class="navbar-brand" href="#">Taxi Colectivo</a>
     </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="reserva-viaje-peru.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Cerrar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
     <div class="principal">
-
-
-      <div class="contenedor3">
-        <div class="texto3">
+      <div class="texto3">
           <p>H. Partida  08:06 pm    -     H. Llegada 08:45 pm</p>
-        </div>
-        <div class="contenedor3">
-          <iframe
+          <a href="ruta_tiemporeal.html"> <button class="boton cancelar" onclick="alertar()">Alertar</button> </a><a href="ruta_tiemporeal.html"> <button class="boton aceptar">Regresar</button> </a>
+          <h3 class="h3"> Alerta por fuera de ruta:  <img class="logo" src="./img/alerta.png">   </h3>
+      </div>
+
+    <div class="contenedor3">
+      <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62419.226118794984!2d-77.0988584909876!3d-12.098344666915958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8560da88193%3A0xc96db500423dd90c!2sUPC%20-%20Campus%20San%20Isidro!5e0!3m2!1ses-419!2spe!4v1687639996435!5m2!1ses-419!2spe"
                 width="350" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        </div>
-        <h1 class="h1"> Alerta por fuera de ruta:  <img class="logo" src="./img/alerta.png">   </h1>
+    </div>
+    
 
-      </div>
+      
 <br>
 <div class="contenedor-fila">
- 
   <div class="contenedor-botones">   
                       
     <!-- <a href="https://u201215972.github.io/tcolectivo/aceptacion_taxi1.html"> <button class="boton aceptar">Alertar</button> </a> -->
 
-     <a href="https://u201215972.github.io/tcolectivo/rutas_mapa.html"> <button class="boton cancelar">Alertar Contacto</button> </a>
+     
    
      
     </div>
 
-
-
-    <div class="pie">
-
-      <div class="contenedor-pie">
-        <div class="contenedor-botones">
-          <button class="boton-redondo">
-            <img src="./img/persona1.png" alt="Imagen 2">
-          </button>
-          <button class="boton-redondo">
-            <img src="./img/reloj1.png" alt="Imagen 1">
-          </button>
-          <button class="boton-redondo">
-            <img src="./img/casa2.png" alt="Imagen 2">
-          </button>
-
-
-        </div>
-      </div>
-
-
-
     </div>
 
-
-    </div>
-
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

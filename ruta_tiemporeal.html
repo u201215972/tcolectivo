@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
   <style>
     /* Estilos básicos */
     body {
@@ -66,28 +69,65 @@
       }
     }
   </style>
+<script>
+        function soporte() {
+          alert("En caso de tener algun inconveniente por favor llame a nuestro call center gratuito 0800-99999");
+        }
+    </script>
 </head>
 <body>
-  <div class="container">
-    <div class="banner">
-      <img src="img/taxi.jpg" alt="Logo"
-      style="height: 80px;" class="remove-bg">
-      
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="logo">
+            <img src="Img/taxi.jpg" alt="logo">
+            <a class="navbar-brand" href="#">Taxi Colectivo</a>
     </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="reserva-viaje-peru.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Cerrar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
      <!-- Contenido de la página -->
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="card">
           <div class="card-body">
-            <form>
+            <form action="compartir_ruta_alerta.html">
               <div class="form-group">
                 <label for="pickup">Lugar de Recogida:</label>
-                <input type="text" class="form-control" id="pickup" placeholder="Ingresa el lugar de recogida">
+                <input type="text" class="form-control" id="pickup" placeholder="Av. La marina">
               </div>
               <div class="form-group">
                 <label for="dropoff">Destino:</label>
-                <input type="text" class="form-control" id="dropoff" placeholder="Ingresa el destino">
+                <input type="text" class="form-control" id="dropoff" placeholder="Faucet">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Compartir ruta</button>
+              </div>
+            </form>
+            <form action="conductor_sel.html">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Ver datos Piloto</button>
+              </div>
+            </form>
+            <form action="gracias.html">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Finalizar viaje</button>
+              </div>
+            </form>
+            <form>
+              <div class="form-group">
+                <button class="btn btn-primary" onclick="soporte()">Contactar a soporte</button>
               </div>
             </form>
             
@@ -119,11 +159,9 @@
     marker.bindPopup('Ubicación actual').openPopup();
 
   </script>
-  <br>
-  <div style="text-align: center;">
-    <button style="position:absolute 50%;" class="btn-btn-block">&nbsp;&nbsp;
-    <i class="fas fa-search"></i> Mostrar Ruta 
-  </button>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

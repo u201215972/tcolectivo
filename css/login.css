@@ -24,11 +24,8 @@ body {
 }
 
 nav {
-    background-color: #2EA6DE;
-    position: fixed;
-    width: 100%;
-}
-
+      background-color: #2EA6DE;
+    }
 nav .logo {
     display: flex;
     justify-content: start;
@@ -36,11 +33,11 @@ nav .logo {
     box-sizing: border-box;
     padding: 5px;
 }
-
 nav .logo img {
-    height: 70px;
-    width: auto;
-    border-radius: 40px;
+      height: 70px;
+      width: auto;
+      border-radius: 40px;
+
 }
 
 .login {
@@ -63,7 +60,7 @@ nav .logo img {
     width: 150px;
     margin-bottom: 50px;
     justify-self: center;
-    display: none;
+    
     margin-bottom: 5px;
 }
 
@@ -90,6 +87,7 @@ nav .logo img {
     border: none;
     border-radius: 8px;
     height: 28px;
+    width: 60%;
     font-size: var(--font-sm);
     padding: 4px;
     margin-bottom: 12px;
@@ -122,13 +120,7 @@ nav .logo img {
     margin-bottom: 52px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    font-size: var(--font-sm);
-    text-align: center;
-    margin-bottom: 52px;
-}
+
 
 .login .form-container .secondary-btn {
     background-color: #00FFFF;
@@ -149,9 +141,7 @@ a {
 }
 
 @media(max-width: 640px) {
-    nav .logo {
-        display: none;
-    }
+    
 
     .login .form-container .logo {
         display: block;
@@ -162,5 +152,9 @@ a {
         position: absolute;
         bottom: 24px;
         width: inherit;
+    }
+    .forgot { 
+        margin-top: 0px;
+        width: 90%;
     }
 }

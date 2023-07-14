@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Taxi Colectivo - Recuperar Contraseña</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script>
         function registrado() {
-          alert("Gracias por su registro, por favor inicie sesion");
+          alert("Por favor revisar su email");
         }
     </script>
 </head>
@@ -26,24 +26,17 @@
     </nav>
     <section class="login">
         <div class="form-container">
-            <img class="logo" src="Img/taxi.jpg" alt="logo">
-            <hr>
-            <h1>Taxi Colectivo SAC</h1>
-            <hr>
+            <img class="logo" src="img/taxi.jpg" alt="logo">
+            
+            <h1>Recuperar contraseña</h1>
+            
             <form action="Login.html" class="form">
                 <hr>
-                <label for="Registro" class="label">Por favor ingrese los siguientes datos:</label>
-                <hr>
-                <input type="Nombre" id="Nombre" placeholder="* Nombre" class="input input-Nombre" required>
-
+                <label for="Registro" class="label">Por favor ingrese cu correco electronico</label>
+                
                 <input type="Correo" id="Correo" placeholder="* Correo Electronico" class="input input-Correo" required>
 
-                <input type="Contraseña" id="Contraseña" placeholder="* Contraseña" class="input input-Contraseña" required>
-
-                <input type="Contraseña" id="Contraseña" placeholder="* Confirmar Contraseña"
-                    class="input input-Contraseña1" required>
-                <hr>
-                <button class="secondary-btn signup-btn" onclick="registrado()">Regístrar</button>
+                <button class="secondary-btn signup-btn" onclick="registrado()">Enviar link a correo</button>
             </form>  
         </div>
     </section>
