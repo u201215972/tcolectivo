@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/conductores.css"> 
+  <script src="./js/script.js"></script>
+  <title>Seleccionar Conductor</title>
+
+  <style>
+    /* Estilos CSS */
+    @media (max-width: 600px) {
+      /* Estilos para dispositivos móviles */
+      .submit-button {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+
+    @media (min-width: 601px) {
+      /* Estilos para pantallas más grandes */
+      .submit-button {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  </style>
+<div class="fh">
+  <h3>Seleccionar Conductor para el viaje</h3>
+  <br>
+</div>
+
+
+  <script>
+    // Obtener los valores de los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const fecha = urlParams.get('fecha');
+    const hora = urlParams.get('hora');
+    const ubicacion = urlParams.get('ubicacion');
+    const destino = urlParams.get('destino');
+
+    // Mostrar los valores en la página
+    document.write(`<h4>Fecha: ${fecha}  Hora: ${hora}</h4> <br>`);
+    document.write(`<h4 id="fecha_hora">Ubicacion: ${ubicacion}</h4> <br>`);
+    document.write(`<h4>Destino: ${destino}</h4> <br>`);
+  </script>
+ 
+  <script>
+    function seleccionarElemento(id) {
+      // Obtener los datos del elemento seleccionado
+      var conductor = document.getElementById('conductor-' + id).innerText;
+      var vehiculo = document.getElementById('vehiculo-' + id).innerText;
+      var vehiculo = encodeURIComponent(vehiculo);
+      
+      // Codificar los datos para pasarlos como parámetros en la URL
+      var conductor = encodeURIComponent(conductor);
+      var vehiculo = encodeURIComponent(vehiculo);
+      var calificacion = encodeURIComponent(calificacion);
+
+      // Redirigir a la otra página con los datos como parámetros en la URL
+      window.location.href = 'resumen_viaje.html?nombre=' + conductor + '&vehiculo=' + vehiculo + '&calificacion=' + vehiculo;
+    }
+  </script>
+</head>
+<body>
+    <br>
+    <div id="conductor-1" class="conductor" onclick="seleccionarElemento(1)">
+      <img src="./img/imagen_conductor1.jpg" alt="Conductor 1">
+      <div class="info">
+        <div class="nombre" id="nombre-1">Daniel Garrido</div>
+        <div class="vehiculo" id="vehiculo-1">Nissan Versa Gris | AZX 852</div>
+      </div>
+      <div class="calificacion" id="calificacion-1">
+        <svg class="estrella" viewBox="0 0 24 24">
+          <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+        </svg>
+        <svg class="estrella" viewBox="0 0 24 24">
+          <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+        </svg>
+      </div>
+      <div class="tarifa">S/ 28.00 por este viaje</div>
+    </div>
+
+    <div id="conductor-2" class="conductor" onclick="seleccionarElemento(2)">
+        <img src="./img/imagen_conductor2.jpg" alt="Conductor 2">
+        <div class="info">
+          <div class="nombre" id="nombre-2">Julio Villegas</div>
+          <div class="vehiculo" id="vehiculo-2">Toyota Yaris Negro | XYT 106</div>
+        </div>
+        <div class="calificacion">
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+        </div>
+        <div class="tarifa">S/ 23.00 por este viaje</div>
+    </div>
+
+
+     <div id="conductor-3" class="conductor" onclick="seleccionarElemento(3)">
+        <img src="./img/imagen_conductor3.jpg" alt="Conductor 3">
+        <div class="info">
+          <div class="nombre" id="nombre-3">Javier Aguilar</div>
+          <div class="vehiculo" id="vehiculo-3">Kia Rio Negro | AKL 951</div>
+        </div>
+        <div class="calificacion">
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+        </div>
+        <div class="tarifa">S/ 29.50 por este viaje</div>
+    </div>
+
+
+    <div id="conductor-4" class="conductor" onclick="seleccionarElemento(4)">
+        <img src="./img/imagen_conductor4.jpg" alt="Conductor 4">
+        <div class="info">
+          <div class="nombre" id="nombre-4">Alberto Ramos</div>
+          <div class="vehiculo" id="vehiculo-4">Kia Sportage Blanco | ARC 251</div>
+        </div>
+        <div class="calificacion">
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+          <svg class="estrella" viewBox="0 0 24 24">
+            <path d="M12 2L13.65 7.35L19.79 8.46L14.47 12.14L15.76 17.27L12 14.43L8.24 17.27L9.53 12.14L4.21 8.46L10.35 7.35L12 2"/>
+          </svg>
+        </div>
+        <div class="tarifa">S/ 21.50 por este viaje</div>
+    </div>
+
+  <!-- Más elementos... -->
+
+</body>
+</html>

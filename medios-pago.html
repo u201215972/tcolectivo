@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Taxi Colectivo - Seleccionar Tarifa</title>
+  <title>Taxi Colectivo - Confirmar pago</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/login.css">
+  <script>
+        function gracias() {
+          alert("Gracias! - Su pago fue aceptado, por favor revise la información de su viaje");
+        }
+  </script>
 </head>
 <body>
   <!-- Barra de navegación -->
@@ -33,22 +38,31 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h1 class="text-center mb-4">Seleccionar Tarifa</h1>
+        <h1 class="text-center mb-4">Confirmar pago</h1>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Información del Viaje</h5>
-            <p class="card-text">Av. La marina - Faucet</p>
-            <form action="medios-pago.html">
-              <div class="form-group">
-                <label for="tarifa">Selecciona una Tarifa:</label>
-                <select class="form-control" id="tarifa">
-                  <option>Tarifa 1: S/ 9.00 (15:00 horas)</option>
-                  <option>Tarifa 2: S/ 10.00 (16:00 horas)</option>
-                  <option>Tarifa 3: S/ 12.00 (18:00 horas)</option>
-                  <option>Tarifa 4: S/ 14.00 (20:00 horas)</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+            <h5 class="card-title">Detalles del Viaje</h5>
+            <p class="card-text">Ruta: Av. La marina - Faucet</p>
+            <p class="card-text">Hora: 04:00 PM</p>
+            <p class="card-text">Taxista: Juan Perez</p>
+            <p class="card-text">Monto: S/10.00</p>
+            <p class="card-text">Medio de Pago:</p>
+            <div class="payment-methods">
+              <label class="payment-method">
+                <input type="radio" name="payment" value="cash">
+                <img src="img/imagen-cash.png" width="50px" alt="Efectivo">
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="payment" value="credit-card">
+                <img src="img/imagen-credit-card.jpg" width="60px" alt="Tarjeta de Crédito">
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="payment" value="yape">
+                <img src="img/imagen-yape.jpg" width="50px" alt="Yape">
+              </label>
+            </div>
+            <form action="aceptacion_taxi1.html">
+              <button type="submit" class="btn btn-primary btn-block" onclick="gracias()">Realizar Pago</button>
             </form>
           </div>
         </div>
